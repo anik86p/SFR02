@@ -1,0 +1,50 @@
+Manifest-Version: 1.0
+Bundle-License: GPL
+Bundle-SymbolicName: io.earcam.wrapped.org.openjdk.dio
+Built-By: caspar
+Bnd-LastModified: 1491842088289
+Specification-Title: Device I/O
+Bundle-DocURL: https://earcam.io
+Import-Package: com.oracle.dio.impl,com.oracle.dio.power.impl,com.orac
+ le.dio.registry,com.oracle.dio.utils,jdk.dio,jdk.dio.gpio,jdk.dio.i2c
+ bus,jdk.dio.modem,jdk.dio.spi,jdk.dio.spibus,jdk.dio.uart
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Export-Package: jdk.dio;version="1.1.0",jdk.dio.adc;uses:="jdk.dio";ve
+ rsion="1.1.0",jdk.dio.atcmd;uses:="jdk.dio,jdk.dio.modem";version="1.
+ 1.0",jdk.dio.counter;uses:="jdk.dio,jdk.dio.gpio";version="1.1.0",jdk
+ .dio.dac;uses:="jdk.dio";version="1.1.0",jdk.dio.generic;uses:="jdk.d
+ io";version="1.1.0",jdk.dio.gpio;uses:="jdk.dio";version="1.1.0",jdk.
+ dio.i2cbus;uses:="jdk.dio";version="1.1.0",jdk.dio.modem;uses:="jdk.d
+ io";version="1.1.0",jdk.dio.power;uses:="jdk.dio";version="1.1.0",jdk
+ .dio.pwm;uses:="jdk.dio,jdk.dio.gpio";version="1.1.0",jdk.dio.spi;use
+ s:="jdk.dio";version="1.1.0",jdk.dio.spibus;uses:="jdk.dio";version="
+ 1.1.0",jdk.dio.uart;uses:="jdk.dio,jdk.dio.modem";version="1.1.0",jdk
+ .dio.watchdog;uses:="jdk.dio";version="1.1.0",com.oracle.dio.gpio.imp
+ l;uses:="com.oracle.dio.impl,com.oracle.dio.registry,jdk.dio,jdk.dio.
+ gpio";version="1.1.0",com.oracle.dio.i2cbus.impl;uses:="com.oracle.di
+ o.impl,com.oracle.dio.registry,jdk.dio,jdk.dio.i2cbus";version="1.1.0
+ ",com.oracle.dio.impl;uses:="com.oracle.dio.power.impl,jdk.dio";versi
+ on="1.1.0",com.oracle.dio.power.impl;uses:="com.oracle.dio.impl,jdk.d
+ io";version="1.1.0",com.oracle.dio.registry;uses:="jdk.dio";version="
+ 1.1.0",com.oracle.dio.spibus.impl;uses:="com.oracle.dio.impl,com.orac
+ le.dio.registry,jdk.dio,jdk.dio.spibus";version="1.1.0",com.oracle.di
+ o.uart.impl;uses:="com.oracle.dio.impl,com.oracle.dio.registry,jdk.di
+ o,jdk.dio.uart";version="1.1.0",com.oracle.dio.utils;version="1.1.0"
+Bundle-Name: org.openjdk.dio
+Bundle-NativeCode: lib/arm/libdio.so;processor=arm;osname=linux
+Bundle-Description: See https://wiki.openjdk.java.net/display/dio
+Implementation-Title: jdk.dio
+Implementation-Version: dev
+Bundle-ManifestVersion: 2
+Specification-Vendor: Oracle Corporation
+Bundle-Vendor: earcam
+Tool: Bnd-3.2.0.201605172007
+Implementation-Vendor: Oracle Corporation
+Mercurial-ChangeSet: 140:2d562d9c0044
+Originally-Created-By: 1.8.0_121 (Oracle Corporation)
+Bundle-Version: 1.1.0
+Mercurial-Revision: 140
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_121
+Specification-Version: 1.1
+
