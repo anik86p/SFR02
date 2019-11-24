@@ -10,28 +10,30 @@ import org.springframework.context.annotation.Configuration;
 public class DistanceMeasurementConfiguration
 {
     public static boolean isSimulation=true;
-	private final Srf02Configuration srf02Configuration;
-	public DistanceMeasurementConfiguration(@Autowired Srf02Configuration srf02UsbConfiguration)
-	{
-		this.srf02Configuration = srf02UsbConfiguration;
+    private final Srf02Configuration srf02Configuration;
+    public DistanceMeasurementConfiguration(@Autowired Srf02Configuration srf02UsbConfiguration)
+    {
+        this.srf02Configuration = srf02UsbConfiguration;
 
         srf02UsbConfiguration.Conf();
-	}
-	@Bean 
-	public DistanceMeasurementProvider getDistanceMeasurementProvider() throws Exception
+    }
+    @Bean
+    public DistanceMeasurementProvider getDistanceMeasurementProvider() throws Exception
     {
         if (isSimulation)
         {
-            System.out.println("Starting in SIMULATION mode");
+
+            SRFLogger.showMessage(SRFLogger.INFO_MSG, "Starting in SIMULATION mode");
             return new SimulationDistanceProvider();
         }
         else
-            {
-            System.out.println("Starting in SENSOR mode");
+        {
+
+            SRFLogger.showMessage(SRFLogger.INFO_MSG, "Starting in SENSOR mode");
             return new Srf02Connector("COM5");
-             }
+        }
     }
 
-    }
+}
 
 

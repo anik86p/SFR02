@@ -19,7 +19,7 @@ public class DistanceService {
 
     @RequestMapping(value = "/distance", method = RequestMethod.GET)
     @ResponseBody
-    public Distance getDistance() throws Exception 
+    public Distance getDistance() throws Exception
     {
         if (distance==null || System.currentTimeMillis() - lastUpdate > 1000)
         {
@@ -28,21 +28,21 @@ public class DistanceService {
         return distance;
     }
 
-    private void refresh() 
+    private void refresh()
     {
         try {
             this.lastUpdate = System.currentTimeMillis();
             this.distance = new Distance(distanceService.getDistance(), Distance.UNIT_CM);
         }
-        catch (IOException e) 
+        catch (IOException e)
         {
             // TODO Auto-generated catch block
-           // e.printStackTrace();
+            // e.printStackTrace();
         }
         catch (InterruptedException e)
         {
             // TODO Auto-generated catch block
-           // e.printStackTrace();
+            // e.printStackTrace();
         }
     }
 

@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "srf02")
 public class Srf02Configuration
 {
-     DistanceMeasurementConfiguration x;
+     DistanceMeasurementConfiguration dmConfig;
     public void Conf()
     {
 
@@ -14,16 +14,10 @@ public class Srf02Configuration
         while (ports.hasMoreElements())
         {
             CommPortIdentifier port = (CommPortIdentifier) ports.nextElement();
-            String P=port.getName();
-            String T="COM5";
-            P=P.toString();
-            if(port.getPortType()==CommPortIdentifier.PORT_SERIAL && T.equals(P))
+            if(port.getPortType()==CommPortIdentifier.PORT_SERIAL
+                    && "COM5".equals(port.getName().toString()))
             {
-                x.isSimulation=false;
-            }
-            else
-            {
-                x.isSimulation = x.isSimulation;
+                dmConfig.isSimulation=false;
             }
 
         }

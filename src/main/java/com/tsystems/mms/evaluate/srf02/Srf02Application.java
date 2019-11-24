@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class Srf02Application {
 
 	public static void main(String[] args)
-        {
+	{
 		SpringApplication.run(Srf02Application.class, args);
 
 	}

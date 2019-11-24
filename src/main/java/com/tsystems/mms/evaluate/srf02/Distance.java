@@ -9,11 +9,11 @@ public class Distance {
 	public static final String UNIT_CM = "cm";
 	public static final String UNIT_M =  "m";
 	public static final String UNIT_KM = "km";
-	
+
 	private final double distance;
-	
+
 	private final String unit;
-	
+
 	public Distance(double distance, String unit) {
 		this.distance = distance;
 		this.unit = unit;
@@ -26,5 +26,5 @@ public class Distance {
 	public String getUnit() {
 		return unit;
 	}
-	
+
 }
