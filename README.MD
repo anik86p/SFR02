@@ -1,19 +1,4 @@
-# Setup
-
-
-  
-
-# Build
-
-
-
-
-# IDE integration
-
-
-
-
-# Run
+Reading data from sensor SRF02 form computer via I2C bus using USB to I@C converter
 
 
 
