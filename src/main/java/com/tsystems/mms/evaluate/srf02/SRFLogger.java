@@ -10,6 +10,7 @@ public class SRFLogger {
     private static final String ANSI_GREEN = "\u001B[32m";
     private static final String ANSI_RESET = "\u001B[0m";
 
+
     public static void showMessage(int msgType, String msg) {
         String prefix = ANSI_BLUE;
 
