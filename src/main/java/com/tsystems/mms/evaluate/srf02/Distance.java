@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Distance {
-	public int x=10;
-
+     public int Anik=10;
 	public static final String UNIT_MM = "mm";
 	public static final String UNIT_CM = "cm";
 	public static final String UNIT_M =  "m";
